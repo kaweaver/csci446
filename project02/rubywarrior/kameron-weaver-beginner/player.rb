@@ -13,7 +13,11 @@ class Player
 			warrior.walk!
 		end
 	else
-		warrior.attack!
+		if(warrior.feel.captive?)
+                        warrior.rescue!
+                else
+			warrior.attack!
+		end
 	end
 	@lastHealth = warrior.health
   end
