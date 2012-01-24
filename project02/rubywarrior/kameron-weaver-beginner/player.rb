@@ -5,7 +5,10 @@ class Player
     	took_damage = @last_known_health > warrior.health
 
     # add your code here
-	if(warrior.feel.empty?)
+
+	if(warrior.feel.wall?)
+		warrior.pivot!
+	elsif(warrior.feel.empty?)
 		if(took_damage)
 			if(warrior.health < 10)
 				warrior.walk! :backward
