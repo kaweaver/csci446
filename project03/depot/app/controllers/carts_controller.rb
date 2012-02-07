@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Agile Web Development with Rails",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
+#---
 class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
@@ -66,7 +74,7 @@ class CartsController < ApplicationController
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
         format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
-        format.json { head :no_content }
+        format.json { head :ok }
       else
         format.html { render action: "edit" }
         format.json { render json: @cart.errors, status: :unprocessable_entity }
@@ -81,9 +89,9 @@ class CartsController < ApplicationController
     @cart.destroy
     session[:cart_id] = nil
     respond_to do |format|
-      format.html { redirect_to store_url,
-        notice:'Your cart is currently empty.' }
-      format.json { head :no_content }
+      format.html { redirect_to store_url }
+      format.json { head :ok }
     end
   end
 end
+
