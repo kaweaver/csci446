@@ -16,7 +16,6 @@
   .article_listing {
     overflow: scroll;
     height: 100px;
-  }
   .list_all_table {
     width:80%;
   }

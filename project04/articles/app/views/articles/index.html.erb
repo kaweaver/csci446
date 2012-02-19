@@ -6,8 +6,8 @@
 <h2>All the World's Articles</h2>
 <%= link_to 'New Article', new_article_path %>
 
-<table>
-  <tr>
+<table class="list_all_table">
+  <tr class="list_header">
     <th>Title</th>
     <th>Author Name</th>
     <th>Body</th>
@@ -16,17 +16,18 @@
     <th></th>
     <th></th>
   </tr>
-
+<div class="articles_listing">
 <% @articles.each do |article| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even')%>">
     <td><%= article.title %></td>
     <td><%= article.authorname %></td>
-    <td><%= article.body %></td>
-    <td><%= article.creationdate %></td>
+    <td><%= truncate(strip_tags(article.body), length: 45) %></td>
+    <td><%= article.created_at %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
+</div>
 <% end %>
 </table>
 <h3><%= pluralize(@articles.length, "article")%></h3>

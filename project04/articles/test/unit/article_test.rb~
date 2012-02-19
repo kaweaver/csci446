@@ -7,5 +7,6 @@ class ArticleTest < ActiveSupport::TestCase
     assert article.errors[:title].any?
     assert article.errors[:authorname].any?
     assert article.errors[:body].any?
+    assert article.errors[:creationdate].any?
   end
 end
