@@ -1,0 +1,37 @@
+<center>
+<h1>Articl.es</h1>
+<h3>...with a name .com hipsters love!</h3>
+</center>
+
+<div>
+<h2 style="float:left">All the World's Articles</h2>
+<div style="float:right"><%= link_to 'New Article', new_article_path %></div>
+</div>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author Name</th>
+    <th>Body</th>
+    <th>Creation Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.authorname %></td>
+    <td><%= article.body %></td>
+    <td><%= article.creationdate %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<h3><%= pluralize(@articles.length, "article")%></h3>
+
+<br />
+

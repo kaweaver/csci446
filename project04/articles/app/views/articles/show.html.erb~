@@ -1,0 +1,19 @@
+<center>
+<h1>Articl.es</h1>
+<h3>... what's "Articl" in Spanish anyway?</h3>
+</center>
+
+<%= link_to 'Back', articles_path %>
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to 'Delete', @article, confirm: 'Are you sure?', method: :delete %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @article.title %></h1>
+  <h3>by <%= @article.authorname %>. edits since <%= @article.creationdate %>.</h3>
+</p>
+
+<p style="width:75%">
+  <%= @article.body %>
+</p>
