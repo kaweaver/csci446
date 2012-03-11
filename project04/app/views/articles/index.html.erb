@@ -4,9 +4,9 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Authorname</th>
+    <th>Author Name</th>
     <th>Body</th>
-    <th>Creationdate</th>
+    <th>Creation Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -26,5 +26,6 @@
 </table>
 
 <br />
+<%= pluralize(@articles.count, "article") %>
 
 <%= link_to 'New Article', new_article_path %>
