@@ -1,0 +1,64 @@
+1. POST is used to create, put can create or update.
+2. Relative
+3. Absolute urls define the entire path (directory) to the file, relative urls add to the url already define.
+4. This would generate a POST request
+5. Yes, request_type=PUT
+6. AccessKey could be used to execute functions normally done by the mouse.
+7. The role of the database is for storage. The role of the web browser is for presentation.
+8. No, the Connection is Keep-Alive, which means something is being sent simply to keep the connection open.
+9. 
+
+class Troll
+  attr_accessor :grunt
+  def initialize
+    @grunt = "UNGAH"
+  end
+  def speak()
+    puts grunt
+  end
+  def reverse()
+    puts grunt.reverse
+  end
+  def propagate()
+    newTroll = Troll.new
+    newTroll.grunt = "eegah"
+    return newTroll
+  end
+  public
+    def ugliness
+      @ugliness
+    end
+    def strength
+      @strength
+    end
+    def smelliness
+      @smelliness
+    end
+end
+
+10. The class definition is missing a method called fight.
+11. 
+12. True or false should be returned by a method ending in a question mark.
+13. The '!' means that it is a 'dangerous' version of a method that does the same thing.
+14. Ruby uses the Duck type system, which means one must only be concerned with what aspects on object has, not the type of the object.
+15. %w() creates an array of words, the example given would create ["master", "rails", "and", "then", "try", "antoher", "framework", "you'll", "never", "go", "back"]
+16. Yes it would do the same thing.
+17. No, the last expression of a method in ruby is automatically returned, so simply put something like "Hello" at the end of the method would return "Hello" when the method is called.
+18. before_validation, after_validation, before_create, and after_create
+19. 
+
+HTTP method	controller action	CRUD operation
+
+GET		index			read
+GET		new			create
+POST		create			create
+GET		edit			update
+PUT		update			update
+DELETE		destroy			delete
+
+20. Some browsers do not support put and delete methods, so instead they use a post with a query string called _method = to put or delete.
+21. I am a little confused by this question, is it at the instance of creation? I ask this because what I have learned is that the environments are configurable. The main difference I have seen is that the development environment reloads the application code on every request, unlike production.
+22. 
+23. Helper methods should be defined and used when code in views is repeated multiple times.
+24. There must be a join table that references the other tables. 
+25. 
