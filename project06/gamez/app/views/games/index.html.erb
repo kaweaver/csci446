@@ -1,10 +1,10 @@
-<h1>Listing games</h1>
+<center><h1>Listing games</h1></center>
 
 <table>
   <tr>
     <th>Title</th>
     <th>Rating</th>
-    <th>Author</th>
+    <th>Date Added</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,10 +14,7 @@
   <tr>
     <td><%= game.Title %></td>
     <td><%= game.Rating %></td>
-    <td><%= game.Author %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= game.created_at %> by <%= game.Author %></td>
   </tr>
 <% end %>
 </table>
