@@ -1,0 +1,10 @@
+%center
+  %h1 Listing games
+%p
+  = will_paginate @games
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th Date Added
+  - @games.each do |game|

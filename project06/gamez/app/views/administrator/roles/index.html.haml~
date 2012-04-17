@@ -1,0 +1,17 @@
+%h1 Listing roles
+
+%p
+  = will_paginate @roles
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Number of Users
+  - @roles.each do |role|
+    %tr
+      %td= link_to role.name, edit_administrator_role_path(role)
+      %td= role.description
+      %td= role.users.count
+      %td= link_to 'Destroy', role, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Role', new_administrator_role_path

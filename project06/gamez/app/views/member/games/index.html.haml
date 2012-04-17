@@ -1,8 +1,9 @@
 %center
-  %h1 Listing games
+  %h1 Listing My games
 = link_to 'New Game', new_game_path
 %br
-= will_paginate @games
+%p
+  = will_paginate @games
 %table
   %tr
     %th Title
@@ -14,3 +15,5 @@
       %td= gameRating(game)
       %td= gameDate(game)
 %br/
+%p
+  = "Created #{pluralize(@games.count, 'game')}."

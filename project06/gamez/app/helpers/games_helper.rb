@@ -29,7 +29,7 @@ def gameDate(game)
     end
 end
 
-def g_rating(game)
+def gameRating(game)
     if game.rating.blank?
         "Not Rated"
     else

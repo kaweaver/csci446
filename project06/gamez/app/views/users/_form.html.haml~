@@ -8,19 +8,19 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :User Name
+    = f.label :Username
     %br/
     = f.text_field :Username
   .field
-    = f.label :password
+    = f.label :password_digest
     %br/
-    = f.text_field :password
+    = f.text_field :password_digest
   .field
-    = f.label :First Name
+    = f.label :Firstname
     %br/
     = f.text_field :Firstname
   .field
-    = f.label :Last Name
+    = f.label :Lastname
     %br/
     = f.text_field :Lastname
   .field
@@ -32,4 +32,4 @@
     %br/
     = f.text_field :photo
   .actions
-    = f.submit 'Register'
+    = f.submit

@@ -2,7 +2,8 @@
   %h1 Listing games
 = link_to 'New Game', new_game_path
 %br
-= will_paginate @games
+%p
+  = will_paginate @games
 %table
   %tr
     %th Title

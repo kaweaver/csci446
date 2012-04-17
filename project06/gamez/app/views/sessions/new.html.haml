@@ -1,3 +1,5 @@
 %h1 New session
+= %(Are you new? #{link_to('Register.', :register)}).html_safe
+%br
+%br
 = render 'form'
-= link_to 'Back', sessions_path
