@@ -1,0 +1,42 @@
+= form_for(@user) do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@user.errors.count, "error")
+        prohibited this user from being saved:
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :Username
+    %br/
+    = f.text_field :Username
+  .field
+    = f.label :password
+    %br/
+    = f.text_field :password
+    .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  .field
+    = f.label :First Name
+    %br/
+    = f.text_field :Firstname
+  .field
+    = f.label :Last Name
+    %br/
+    = f.text_field :Lastname
+  .field
+    = f.label :Email
+    %br/
+    = f.text_field :Email
+  .field
+    = f.label :photo
+    %br/
+    = f.text_field :photo
+    = image_tag @user.photo.url
+  .field
+    = f.label :role
+    = f.collection_select :role_id, Role.all, :id, :name, :prompt => 'Select the user role'
+  .actions
+    = f.submit

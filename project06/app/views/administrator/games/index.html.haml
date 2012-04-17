@@ -1,0 +1,17 @@
+%center
+  %h1 Listing games
+= link_to 'New Game', new_game_path
+%br
+%p
+  = will_paginate @games
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th Date Added
+  - @games.each do |game|
+    %tr
+      %td= gameTitle(game)
+      %td= gameRating(game)
+      %td= gameDate(game)
+%br/
