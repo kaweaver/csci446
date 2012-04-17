@@ -1,0 +1,27 @@
+%h1 Listing users
+- if notice
+  %p#notice= notice
+%table
+  %tr
+    %th Username
+    %th Password digest
+    %th Firstname
+    %th Lastname
+    %th Email
+    %th Photo
+    %th
+    %th
+    %th
+  - @users.each do |user|
+    %tr
+      %td= user.Username
+      %td= user.password_digest
+      %td= user.Firstname
+      %td= user.Lastname
+      %td= user.Email
+      %td= user.photo
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New User', new_user_path
