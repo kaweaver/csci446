@@ -11,12 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120329030550) do
+ActiveRecord::Schema.define(:version => 20120417013845) do
 
   create_table "games", :force => true do |t|
     t.string   "Title"
     t.string   "Rating"
     t.string   "Author"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sessions", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -30,6 +40,9 @@ ActiveRecord::Schema.define(:version => 20120329030550) do
     t.string   "photo"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "photoFile"
+    t.integer  "photoSize"
+    t.string   "photoType"
   end
 
 end
