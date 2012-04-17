@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120417013845) do
+ActiveRecord::Schema.define(:version => 20120417015528) do
 
   create_table "games", :force => true do |t|
     t.string   "Title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20120417013845) do
     t.string   "photoFile"
     t.integer  "photoSize"
     t.string   "photoType"
+    t.integer  "roleId"
   end
 
 end
