@@ -15,9 +15,6 @@
     <td><%= game.Title %></td>
     <td><%= game.Rating %></td>
     <td><%= game.created_at %> by <%= game.Author %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
