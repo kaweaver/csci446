@@ -4,7 +4,4 @@ class AddRoles < ActiveRecord::Migration
    add_column :roles, :count, :integer
    add_column :roles, :name, :string
   end
-
-  def down
-  end
 end
